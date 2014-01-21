@@ -960,7 +960,7 @@ var zhongwenContent = {
             if (window.zhongwen.config.fontSize == 'small') {
                 defClass += '-small';
             }
-            var translation = e[4].replace(/\//g, '; ');
+            var translation = e[4].replace(/([^<])\//g, '$1; ');  // will not replace the slash when it starts the string
             html += '<br><span class="' + defClass + '">' + translation + '</span><br>';
 
             texts[i] = [e[2], e[1], p[1], translation, e[3]];

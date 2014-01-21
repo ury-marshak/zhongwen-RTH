@@ -90,3 +90,14 @@
 #zhongwen-window .tone5 {
   color: #A0A0A0;
 }
+
+#zhongwen-window .RTH {
+  font-size: 120%;
+  text-transfrom: lowercase;
+  font-variant: small-caps;
+}
+
+#zhongwen-window .keyword {
+  font-size: 105%;
+  font-weight: bold;
+}

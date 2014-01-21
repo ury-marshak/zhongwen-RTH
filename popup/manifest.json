@@ -1,11 +1,11 @@
 {
 "update_url": "https://clients2.google.com/service/update2/crx",
 
-    "name": "Zhongwen: A Chinese-English Popup Dictionary",
-    "version": "3.7",
+    "name": "Zhongwen/RTH: Remembering Traditional Hanzi Popup Dictionary",
+    "version": "0.1",
     "manifest_version": 2,
 
-    "description": "Chinese popup translator. Great tool for learning Chinese. Supports adding words to Skritter.",
+    "description": "Based on the regular ",
     "icons": {
         "16": "images/zhongwen16.png",
         "48": "images/zhongwen48.png",
@@ -14,7 +14,7 @@
 
     "browser_action": {
         "default_icon": "images/zhongwen48.png",
-        "default_title": "Zhongwen Chinese Popup Dictionary"
+        "default_title": "Zhongwen/RTH Remembering Traditional Hanzi Dictionary"
     },
 
     "background": {

@@ -1,3 +1,5 @@
 *.crx
 *.pem
 popup-stories
+*~
+popup-orig
