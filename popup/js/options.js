@@ -44,6 +44,13 @@ function loadVals() {
     else {
         document.optform.zhuyin[0].selected = true;
     }
+    storedValue = localStorage['charorder'];
+    if(storedValue == 'simpfirst') {
+        document.optform.charorder[1].selected = true;
+    }
+    else {
+        document.optform.charorder[0].selected = true;
+    }
 }
 
 function storeVals() {
@@ -61,6 +68,9 @@ function storeVals() {
 
     localStorage['zhuyin'] = document.optform.zhuyin.value;
     chrome.extension.getBackgroundPage().zhongwenMain.config.zhuyin = localStorage['zhuyin'];
+
+    localStorage['charorder'] = document.optform.charorder.value;
+    chrome.extension.getBackgroundPage().zhongwenMain.config.charorder = localStorage['charorder'];
 }
 
 $(function() {

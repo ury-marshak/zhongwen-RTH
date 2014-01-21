@@ -927,9 +927,16 @@ var zhongwenContent = {
             if (window.zhongwen.config.fontSize == 'small') {
                 hanziClass += '-small';
             }
-            html += '<span class="' + hanziClass + '">' + e[2] + '</span>&nbsp;';
-            if (e[1] != e[2]) {
-                html += '<span class="' + hanziClass + '">' + e[1] + '</span>&nbsp;';
+
+            var e1 = e[1];
+            var e2 = e[2];
+            if (window.zhongwen.config.charorder == 'tradfirst') {
+                e1 = e[2];
+                e2 = e[1];
+            }
+            html += '<span class="' + hanziClass + '">' + e2 + '</span>&nbsp;';
+            if (e1 != e2) {
+                html += '<span class="' + hanziClass + '">' + e1 + '</span>&nbsp;';
             }
 
             // Pinyin
