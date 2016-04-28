@@ -114,7 +114,7 @@
 
 (defparameter +rth-new-fields+
   '(:trad :keyword :keyword-info :primitive :reading
-    :rth-index :lesson :strokes :story :hint :comments :simp
+    :rth-index :strokes :story :hint :comments :simp
     ))
 
 (defun rth-new-dict (fname-in fname-out)
