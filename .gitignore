@@ -6,3 +6,6 @@ popup-orig
 *.u8
 RTH*.txt
 .DS_Store
+
+*.idx
+.log/

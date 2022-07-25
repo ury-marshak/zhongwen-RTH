@@ -1,0 +1,57 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Zhongwen/RTH: Remembering Traditional Hanzi Popup Dictionary",
+  "short_name": "Zhongwen",
+  "version": "0.1.5.12",
+  "author": "Christian Schiller",
+  "homepage_url": "https://github.com/cschiller/zhongwen",
+  "description": "Based on the regular Zhongwen",
+  "icons": {
+    "16": "images/zhongwen16.png",
+    "48": "images/zhongwen48.png",
+    "128": "images/zhongwen.png"
+  },
+  "browser_action": {
+    "default_icon": "images/zhongwen48.png",
+    "default_title": "Zhongwen/RTH Remembering Traditional Hanzi Dictionary"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/jquery-3.3.1.min.js",
+        "js/zhuyin.js",
+        "content.js"
+      ],
+      "css": [
+        "css/content.css"
+      ],
+      "all_frames": true
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "description": "Enable/Disable Zhongwen"
+    }
+  },
+  "web_accessible_resources": [
+    "css/*",
+    "js/*",
+    "images/*"
+  ]
+}
