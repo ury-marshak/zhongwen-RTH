@@ -50,24 +50,25 @@
             rth-index
             keyword keyword-info-str
             (if (and *compile-stories* (positive? (string-length primitive)))
-                (format "/(Prim: ~A)" primitive)
+                (format "/<span class='prim-note'>(P: <span class='prim'>~A</span>)</span>" primitive)
                 "")
             (if (and *compile-stories* (positive? (string-length story)))
-                (format "/~A" story)
+                (format "/<span class='RTH-story'>~A</span>" story)
                 ""))))
 
 
 
 (define (process-file (fname IN-FILENAME))
   (let ((data (read-RTH IN-FILENAME)))
-    (let* ((pleco-strings (map process-row data)))
+    (let* ((processed-strings (map process-row data)))
       (call-with-output-file OUT-FILENAME
         (lambda (out)
-          (for ([s pleco-strings])
+          (for ([s processed-strings])
             (write-string s out)
             (write-string "\n" out)))
         #:exists 'replace)
-      (take pleco-strings 18))
+      ;(take processed-strings 18)
+      )
     ))
 
 (module+ main

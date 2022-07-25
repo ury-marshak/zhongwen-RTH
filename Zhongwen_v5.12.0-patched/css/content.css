@@ -221,3 +221,26 @@
 #zhongwen-window.tonecolor-hanping .tone5 {
   color: #a0a0a0;
 }
+
+#zhongwen-window .keyword {
+  color: #ffffff;
+  background: #cc0000;
+  font-weight: bold;
+  font-size: 105%;
+}
+
+#zhongwen-window .RTH {
+  color: #707050;
+  font-weight: bold;
+}
+
+#zhongwen-window .prim {
+  color: #000000;
+  background: #eeeeee;
+  //font-weight: bold;
+}
+
+#zhongwen-window .prim-note {
+  color: #777777;
+  //background: #cccccc;
+}
